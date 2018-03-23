@@ -76,7 +76,24 @@
     $ bower install --save animate.css
     
 ![Application](/img/part3-pic3.png?raw=true)    
+
+
+<br/>    
+
+## 04. Register WebAPI Manual JWT
+
+<br/>    
+
+### 20-API Environment Setup
+
+    $ cd backend/
+    $ npm install --save express
     
+    $ nodemon server.js
+    
+
+![Application](/img/part4-pic1.png?raw=true)  
+
 
 ___
 
