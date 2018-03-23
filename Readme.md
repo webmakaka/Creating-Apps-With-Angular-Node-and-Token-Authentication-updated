@@ -10,7 +10,7 @@
 
 <br/>
 
-### 02. Register in Front End Views
+## 02. Register in Front End Views
 
 <br/>
 
@@ -47,6 +47,19 @@
 ![Application](/img/part2-pic1.png?raw=true)
 
 ![Application](/img/part2-pic2.png?raw=true)
+
+
+<br/>
+
+## 03. Register Front End Controllers and Services
+
+<br/>
+
+### 14-Match Password Directive
+
+
+![Application](/img/part3-pic1.png?raw=true)
+
 
 
 ___
