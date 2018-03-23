@@ -1,12 +1,21 @@
 'use strict';
 
 angular
-    .module('myApp').controller('RegisterCtrl', function($scope){
+    .module('myApp').controller('RegisterCtrl', function($scope, $http){
         
         $scope.submit = function(){
-            console.log('test');
+            
+            const url = '/';
+            const user = {};
+            
+            $http.post(url, user)
+                .then(function(res){
+                    console.log("good");
+                })
+                .catch(function(err){
+                    console.log("bad");
+                });
         }
-        
     });
     
     
