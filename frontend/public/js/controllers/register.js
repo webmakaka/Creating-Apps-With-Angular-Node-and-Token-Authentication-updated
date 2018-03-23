@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-    .module('myApp').controller('RegisterCtrl', function($scope, $http){
+    .module('myApp').controller('RegisterCtrl', function($scope, $http, alert){
         
         $scope.submit = function(){
             
@@ -10,12 +10,12 @@ angular
             
             $http.post(url, user)
                 .then(function(res){
-                    console.log("good");
+                    alert('success', 'Ok!', 'You are now registered!');
                 })
                 .catch(function(err){
-                    console.log("bad");
+                    alert('warning', 'Opps!', 'Could not register!');
                 });
-        }
+        };
     });
     
     

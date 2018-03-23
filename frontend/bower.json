@@ -15,6 +15,7 @@
     "angular": "^1.6.9",
     "jquery": "^3.3.1",
     "bootstrap": "^4.0.0",
-    "angular-ui-router": "^1.0.15"
+    "angular-ui-router": "^1.0.15",
+    "animate.css": "^3.5.2"
   }
 }

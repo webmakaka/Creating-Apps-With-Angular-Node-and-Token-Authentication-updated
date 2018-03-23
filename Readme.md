@@ -69,8 +69,14 @@
 
 ### 16-HTTP Post
 
+<br/>
 
+### 17-Alert Service
 
+    $ bower install --save animate.css
+    
+![Application](/img/part3-pic3.png?raw=true)    
+    
 
 ___
 
