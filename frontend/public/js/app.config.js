@@ -14,6 +14,7 @@ angular
             
             .state('register', {
                 url: '/register',
-                templateUrl: 'views/register.html'
+                templateUrl: 'views/register.html',
+                controller: 'RegisterCtrl'
             });
     });

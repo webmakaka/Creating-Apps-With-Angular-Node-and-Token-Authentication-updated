@@ -57,8 +57,13 @@
 
 ### 14-Match Password Directive
 
-
 ![Application](/img/part3-pic1.png?raw=true)
+
+<br/>
+
+### 15-Register Controller
+
+![Application](/img/part3-pic2.png?raw=true)
 
 
 
