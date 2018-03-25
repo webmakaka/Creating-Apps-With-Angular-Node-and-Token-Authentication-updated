@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-    .module('myApp').controller('RegisterCtrl', function($scope, $http, alert){
+    .module('myApp').controller('RegisterCtrl', function($scope, $http, alert, authToken){
         
         $scope.submit = function(){
             
@@ -14,6 +14,8 @@ angular
             $http.post(url, user)
                 .then(function(res){
                     alert('success', 'Ok!', 'You are now registered!');
+                    // authToken.setToken(res.token);
+                    authToken.setToken(res.data.token);
                 })
                 .catch(function(err){
                     alert('warning', 'Opps!', 'Could not register!');

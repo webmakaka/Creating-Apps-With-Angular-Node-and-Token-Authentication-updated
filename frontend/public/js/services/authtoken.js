@@ -3,8 +3,8 @@
 angular.module('myApp')
     .factory('authToken', function ($window){
         
-        const storage = $window.localStorage;
-        const cachedToken;
+        let storage = $window.localStorage;
+        let cachedToken;
         
         return {
             setToken: function(token){
@@ -14,15 +14,11 @@ angular.module('myApp')
             getToken: function(){
                 if(!cachedToken){
                     cachedToken = storage.getItem('userToken');
-                }
-                
+                }                
                 return cachedToken;
             },
             isAuthenticated: function(){
                 return !!this.getToken();
             }
         };
-
     });
-    
-    

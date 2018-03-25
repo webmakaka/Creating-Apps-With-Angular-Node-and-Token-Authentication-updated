@@ -194,7 +194,17 @@
 
 ### 27-Authtoken Factory
 
+<br/>
 
+### 28-isauthenticated
+
+<br/>
+
+![Application](/img/part4-pic12.png?raw=true) 
+
+<br/>
+
+![Application](/img/part4-pic13.png?raw=true) 
 
 ___
 
