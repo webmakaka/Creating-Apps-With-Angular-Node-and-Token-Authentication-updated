@@ -32,15 +32,24 @@ app.post('/register', function(req, res){
         password: user.password
     });
     
+    const payload = {
+        iss: req.hostname,
+        sub: user._id
+    };
+    
+    const token = jwt.encode(payload, "shhh...");
+    
     newUser.save(function(err){
-        res.status(200).send(newUser.toJSON());
+        res.status(200).send({
+                user: newUser.toJSON(),
+                token
+            }
+        );
     });
 });
 
 mongoose.connect(mongoDbConnectString);
 
-console.log(jwt.encode('hi', 'secret'));
-
-// const server = app.listen(port, function(){
-//     console.log('api listening on ', server.address().port);
-// });
+const server = app.listen(port, function(){
+    console.log('api listening on ', server.address().port);
+});

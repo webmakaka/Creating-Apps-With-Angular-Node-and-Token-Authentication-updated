@@ -181,6 +181,14 @@
 ![Application](/img/part4-pic10.png?raw=true) 
 
 
+<br/>
+
+### 26-Token Passed With Register
+
+<br/>
+
+![Application](/img/part4-pic11.png?raw=true) 
+
 ___
 
 **Marley**
