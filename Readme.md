@@ -168,9 +168,20 @@
 <br/>
 
 ![Application](/img/part4-pic9.png?raw=true) 
-    
-___
 
+
+<br/>
+
+### 25-JWT Encoding From Scratch  
+
+    $ npm install --save crypto  
+
+<br/>
+
+![Application](/img/part4-pic10.png?raw=true) 
+
+
+___
 
 **Marley**
 

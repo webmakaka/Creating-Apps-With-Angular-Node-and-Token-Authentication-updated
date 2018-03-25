@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const User = require('./models/User.js');
+const jwt = require('./services/jwt.js');
 
 const app = express();
 
@@ -38,6 +39,8 @@ app.post('/register', function(req, res){
 
 mongoose.connect(mongoDbConnectString);
 
-const server = app.listen(port, function(){
-    console.log('api listening on ', server.address().port);
-});
+console.log(jwt.encode('hi', 'secret'));
+
+// const server = app.listen(port, function(){
+//     console.log('api listening on ', server.address().port);
+// });
