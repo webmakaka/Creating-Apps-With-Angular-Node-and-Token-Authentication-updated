@@ -12,9 +12,8 @@ angular
             };
             
             $http.post(url, user)
-                .then(function(res){
-                    alert('success', 'Account Created!', 'Welcome, ' + res.user.email + '!');
-                    // authToken.setToken(res.token);
+                .then(function(res){                    
+                    alert('success', 'Account Created!', 'Welcome, ' + res.data.email + '!');
                     authToken.setToken(res.data.token);
                 })
                 .catch(function(err){

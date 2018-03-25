@@ -217,16 +217,22 @@
 
 <br/>
 
-![Application](/img/part4-pic14.png?raw=true) 
+![Application](/img/part5-pic1.png?raw=true) 
 
 <br/>
 
 ### 32-Jobs and Greetings
 
+<br/>
 
+### 33-View Animations
 
+    $ cd frontend/
+    $ bower install --save angular-animate
+    
+<br/>
 
-
+![Application](/img/part5-pic2.png?raw=true) 
 ___
 
 **Marley**

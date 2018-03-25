@@ -23,7 +23,7 @@ angular.module('myApp')
             },
             removeToken: function(){
                 cachedToken = null;
-                storage.removeToken(userToken);
+                storage.removeItem(userToken);
             }
         };
         
