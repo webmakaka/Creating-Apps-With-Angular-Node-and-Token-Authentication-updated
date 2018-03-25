@@ -233,6 +233,12 @@
 <br/>
 
 ![Application](/img/part5-pic2.png?raw=true) 
+
+
+<br/>
+
+### 34-Securing the Jobs Resource
+
 ___
 
 **Marley**

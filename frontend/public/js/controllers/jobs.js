@@ -1,10 +1,13 @@
 'use strict';
 
 angular
-    .module('myApp').controller('JobsCtrl', function($scope){
-        $scope.jobs = [
-          'HTML5 Boilerplate',
-          'AngularJS',
-          'Karma'
-      ];
+    .module('myApp').controller('JobsCtrl', function($scope, $http, API_URL, alert){
+        
+        $http.get(API_URL + 'jobs')
+            .then(function(jobs){
+                $scope.jobs = jobs;
+            })
+            .catch(function(err){
+                alert('warning', 'Uname to get jobs', err.message);
+            });
     });

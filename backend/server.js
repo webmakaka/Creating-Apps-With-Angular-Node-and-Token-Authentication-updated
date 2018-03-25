@@ -48,6 +48,23 @@ app.post('/register', function(req, res){
     });
 });
 
+const jobs = [
+    'Cook',
+    'SuperHero',
+    'Unicorn Wisperer',
+    'Toast Inspector'
+];
+
+app.get('/jobs', function(req, res){
+    if(!req.headers.authorization){
+        return res.status(401).send({
+            message: 'You are not authorized'
+        });
+    }
+
+    res.json(jobs);
+});
+
 mongoose.connect(mongoDbConnectString);
 
 const server = app.listen(port, function(){
