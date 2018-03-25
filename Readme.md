@@ -206,6 +206,19 @@
 
 ![Application](/img/part4-pic13.png?raw=true) 
 
+
+<br/>
+
+## 05. Register WebAPI JWT Library
+
+<br/>
+
+### 31-Logout
+
+<br/>
+
+![Application](/img/part4-pic14.png?raw=true) 
+
 ___
 
 **Marley**

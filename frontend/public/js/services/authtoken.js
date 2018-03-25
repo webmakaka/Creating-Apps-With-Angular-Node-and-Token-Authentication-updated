@@ -5,20 +5,27 @@ angular.module('myApp')
         
         let storage = $window.localStorage;
         let cachedToken;
+        const userToken = 'userToken';
         
-        return {
+        const authToken = {
             setToken: function(token){
                 cachedToken = token;
-                storage.setItem('userToken', token);
+                storage.setItem(userToken, token);
             },
             getToken: function(){
                 if(!cachedToken){
-                    cachedToken = storage.getItem('userToken');
+                    cachedToken = storage.getItem(userToken);
                 }                
                 return cachedToken;
             },
             isAuthenticated: function(){
-                return !!this.getToken();
+                return !!authToken.getToken();
+            },
+            removeToken: function(){
+                cachedToken = null;
+                storage.removeToken(userToken);
             }
         };
+        
+        return authToken;
     });
