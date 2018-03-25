@@ -7,7 +7,8 @@ angular
             
             const url = 'http://localhost:3000/register';
             const user = {
-                name: 'Alex'
+                email: $scope.email,
+                password: $scope.password
             };
             
             $http.post(url, user)

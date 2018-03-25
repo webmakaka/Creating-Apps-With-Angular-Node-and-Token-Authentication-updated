@@ -100,7 +100,7 @@
 
 ### 21-API Register Post
 
-
+    $ cd backend/
     $ npm install --save body-parser
     $ nodemon server.js
     
@@ -110,6 +110,8 @@
     $ cd frontend/
     $ nodemon server.js
 
+<br/>
+
 ![Application](/img/part4-pic2.png?raw=true)  
 
 <br/>
@@ -117,10 +119,31 @@
 ![Application](/img/part4-pic3.png?raw=true)  
 
 
+<br/>
 
+### 22-MongoDB Save User
     
+    $ cd backend/
+    $ npm install --save mongoose
     
+    $ cd frontend/
+    $ nodemon staticServer.js 
 
+    $ cd backend/
+    $ nodemon server.js
+    
+<br/>
+
+![Application](/img/part4-pic4.png?raw=true)      
+    
+<br/>
+
+![Application](/img/part4-pic5.png?raw=true)      
+
+<br/>
+
+![Application](/img/part4-pic6.png?raw=true)      
+    
 ___
 
 
