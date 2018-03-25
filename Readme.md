@@ -144,6 +144,25 @@
 
 ![Application](/img/part4-pic6.png?raw=true)      
     
+<br/>
+    
+### 23-Encrypt Password With Hash
+
+    $ cd backend/
+    $ npm install --save bcrypt-nodejs
+
+
+<br/>
+
+![Application](/img/part4-pic7.png?raw=true) 
+
+<br/>
+
+![Application](/img/part4-pic8.png?raw=true)   
+
+
+
+    
 ___
 
 

@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const User = require('./models/User.js');
 
 const app = express();
 
@@ -17,10 +18,7 @@ app.use(function(req, res, next){
     next();
 });
 
-const User = mongoose.model('User', {
-    email: String,
-    password: String
-});
+
 
 app.post('/register', function(req, res){
     
@@ -28,7 +26,7 @@ app.post('/register', function(req, res){
     
     console.log(user);
     
-    const newUser = new User({
+    const newUser = new User.model({
         email: user.email,
         password: user.password
     });
