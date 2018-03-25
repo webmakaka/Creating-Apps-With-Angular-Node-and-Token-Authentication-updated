@@ -5,8 +5,10 @@ angular
         
         $scope.submit = function(){
             
-            const url = '/';
-            const user = {};
+            const url = 'http://localhost:3000/register';
+            const user = {
+                name: 'Alex'
+            };
             
             $http.post(url, user)
                 .then(function(res){

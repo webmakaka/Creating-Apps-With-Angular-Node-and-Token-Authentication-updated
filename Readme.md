@@ -95,7 +95,34 @@
 ![Application](/img/part4-pic1.png?raw=true)  
 
 
+
+<br/>
+
+### 21-API Register Post
+
+
+    $ npm install --save body-parser
+    $ nodemon server.js
+    
+    -- another session to docker container
+    $ docker exec -it creating-apps-with-angular-node-and-token-authentication bash
+    
+    $ cd frontend/
+    $ nodemon server.js
+
+![Application](/img/part4-pic2.png?raw=true)  
+
+<br/>
+
+![Application](/img/part4-pic3.png?raw=true)  
+
+
+
+    
+    
+
 ___
+
 
 **Marley**
 
