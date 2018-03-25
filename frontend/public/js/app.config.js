@@ -18,6 +18,12 @@ angular
                 controller: 'RegisterCtrl'
             })
             
+            .state('jobs', {
+                url: '/jobs',
+                templateUrl: 'views/jobs.html',
+                controller: 'JobsCtrl'
+            })
+            
             .state('logout', {
                 url: '/logout',
                 controller: 'LogoutCtrl'

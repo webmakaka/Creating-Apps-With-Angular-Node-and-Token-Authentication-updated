@@ -219,6 +219,14 @@
 
 ![Application](/img/part4-pic14.png?raw=true) 
 
+<br/>
+
+### 32-Jobs and Greetings
+
+
+
+
+
 ___
 
 **Marley**

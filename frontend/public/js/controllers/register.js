@@ -13,7 +13,7 @@ angular
             
             $http.post(url, user)
                 .then(function(res){
-                    alert('success', 'Ok!', 'You are now registered!');
+                    alert('success', 'Account Created!', 'Welcome, ' + res.user.email + '!');
                     // authToken.setToken(res.token);
                     authToken.setToken(res.data.token);
                 })
