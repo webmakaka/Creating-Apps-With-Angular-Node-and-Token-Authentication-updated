@@ -161,7 +161,13 @@
 ![Application](/img/part4-pic8.png?raw=true)   
 
 
+<br/>
+    
+### 24-Hide Password
 
+<br/>
+
+![Application](/img/part4-pic9.png?raw=true) 
     
 ___
 
