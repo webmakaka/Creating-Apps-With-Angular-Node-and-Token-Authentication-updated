@@ -1,21 +1,24 @@
 'use strict';
 
 angular.module('myApp')
-    .service('auth', function auth($http, API_URL, authToken){
+    .service('auth', function auth($http, API_URL, authToken, $state){
         
         const url = API_URL + 'login';
-        const user = {
-            email: $scope.email,
-            password: $scope.password
-        };
         
         this.login = function(email, password){
-            return $http.post(url,{
+            
+            console.log(email);
+            console.log(password);
+            
+            return $http.post(url, {
                 email,
                 password
             })
-            .then(function(res){
+            .then(function(res){                
                 authToken.setToken(res.data.token);
+                $state.go('main');
+                
+                return res;
             });
         };
         

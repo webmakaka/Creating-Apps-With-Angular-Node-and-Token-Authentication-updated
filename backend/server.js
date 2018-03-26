@@ -64,8 +64,7 @@ app.post('/login', function(req, res){
                 res.status(401).send({
                     message: 'Wrong email/password Mismatch'
                 });
-            }
-            
+            }            
             createSendToken(user, res);
         });
         
@@ -76,6 +75,8 @@ function createSendToken(user, res){
     const payload = {
         sub: user.id
     };
+    
+
     
     const token = jwt.encode(payload, "shhh...");
     
