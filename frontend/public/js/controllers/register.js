@@ -1,11 +1,11 @@
 'use strict';
 
 angular
-    .module('myApp').controller('RegisterCtrl', function($scope, $http, alert, authToken){
+    .module('myApp').controller('RegisterCtrl', function($scope, $http, alert, authToken, API_URL){
         
         $scope.submit = function(){
             
-            const url = 'http://localhost:3000/register';
+            const url = API_URL + 'register';
             const user = {
                 email: $scope.email,
                 password: $scope.password
@@ -17,7 +17,7 @@ angular
                     authToken.setToken(res.data.token);
                 })
                 .catch(function(err){
-                    alert('warning', 'Opps!', 'Could not register!');
+                    alert('warning', 'Something went wrong :(', err.message);
                 });
         };
     });
