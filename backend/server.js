@@ -29,9 +29,11 @@ app.use(function(req, res, next){
     next();
 });
 
-const strategy = new LocalStrategy({
+const strategyOptions ={
     usernameField: 'email'
-}, function(email, password, done){
+};
+
+const loginStrategy = new LocalStrategy(strategyOptions, function(email, password, done){
     
     const searchUser = {
         email
@@ -62,25 +64,28 @@ const strategy = new LocalStrategy({
     });
 });
 
-passport.use(strategy);
+const registerStrategy = new LocalStrategy(strategyOptions, function (email, password, done){
 
-app.post('/register', function(req, res){
-    
-    const user = req.body;
-    
-    console.log(user);
-    
     const newUser = new User({
-        email: user.email,
-        password: user.password
+        email: email,
+        password: password
     });
     
     newUser.save(function(err){
-        createSendToken(newUser, res);
+        done(null, newUser);
     });
+    
 });
 
-app.post('/login', passport.authenticate('local'), function(req, res){
+passport.use('local-register', registerStrategy);
+
+passport.use('local-login', loginStrategy);
+
+app.post('/register', passport.authenticate('local-register'), function(req, res){
+    createSendToken(req.user, res);
+});
+
+app.post('/login', passport.authenticate('local-login'), function(req, res){
     createSendToken(req.user, res);
 });
 
