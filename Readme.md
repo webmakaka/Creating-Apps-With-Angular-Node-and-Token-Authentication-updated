@@ -277,10 +277,23 @@
 
 ## 06. Login
 
+<br/>
+
 ### 42-Login Endpoint
 
+<br/>
 
-    
+### 43-Login View
+
+<br/>
+
+![Application](/img/part6-pic1.png?raw=true) 
+
+<br/>
+
+![Application](/img/part6-pic2.png?raw=true) 
+
+
 ___
 
 **Marley**
