@@ -56,12 +56,22 @@ const jobs = [
 ];
 
 app.get('/jobs', function(req, res){
+    
     if(!req.headers.authorization){
         return res.status(401).send({
             message: 'You are not authorized'
         });
     }
-
+    
+    const token = req.headers.authorization.split(' ')[1];
+    const payload = jwt.decode(token, "shhh...");
+    
+    if(!payload.sub){
+        res.status(401).send({
+            message: 'Authentication failed'
+        });
+    }
+    
     res.json(jobs);
 });
 

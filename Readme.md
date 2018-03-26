@@ -252,6 +252,12 @@
 
 ![Application](/img/part5-pic4?raw=true) 
 
+
+<br/>
+
+### 36-JWT Decoding From Scratch
+
+
 ___
 
 **Marley**
