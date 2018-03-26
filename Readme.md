@@ -270,11 +270,16 @@
 
 ### 39-Switching to Node JWT Simple
 
-
     $ cd backend/
     $ npm install --save jwt-simple
-    
-    
+
+<br/>
+
+## 06. Login
+
+### 42-Login Endpoint
+
+
     
 ___
 

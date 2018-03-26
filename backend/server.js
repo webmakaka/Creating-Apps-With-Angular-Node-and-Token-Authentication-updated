@@ -28,26 +28,63 @@ app.post('/register', function(req, res){
     
     console.log(user);
     
-    const newUser = new User.model({
+    const newUser = new User({
         email: user.email,
         password: user.password
     });
     
+    newUser.save(function(err){
+        createSendToken(newUser, res);
+    });
+});
+
+app.post('/login', function(req, res){
+    req.user = req.body;
+    
+    const searchUser = {
+        email: req.user.email
+    }
+    
+    User.findOne(searchUser, function(err, user){
+        if (err) {
+            throw err;
+        }
+        
+        if(!user){
+            res.status(401).send({
+                message: 'Wrong email/password'
+            });
+        }
+            
+        user.comparePasswords(req.user.password, function(err, isMatch){
+            if(err){
+                throw err;
+            }
+            if(!isMatch){
+                res.status(401).send({
+                    message: 'Wrong email/password Mismatch'
+                });
+            }
+            
+            createSendToken(user, res);
+        });
+        
+    });
+});
+
+function createSendToken(user, res){
     const payload = {
-        iss: req.hostname,
-        sub: newUser.id
+        sub: user.id
     };
     
     const token = jwt.encode(payload, "shhh...");
     
-    newUser.save(function(err){
-        res.status(200).send({
-                user: newUser.toJSON(),
-                token
-            }
-        );
-    });
-});
+    res.status(200).send({
+            user: user.toJSON(),
+            token
+        }
+    );
+}
 
 const jobs = [
     'Cook',
