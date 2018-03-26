@@ -9,7 +9,7 @@ angular.module('myApp')
                 const token = authToken.getToken();
                 
                 if(token){
-                    config.headers.Authorization = 'Bearer' + token;
+                    config.headers.Authorization = '!!!!!!!!!! ' + token;
                 }
                 
                 return config;

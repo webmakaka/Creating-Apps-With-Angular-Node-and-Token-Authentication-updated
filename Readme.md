@@ -258,6 +258,14 @@
 ### 36-JWT Decoding From Scratch
 
 
+<br/>
+
+### 37-Verifying the Signature
+
+
+
+
+
 ___
 
 **Marley**

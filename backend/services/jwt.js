@@ -22,9 +22,18 @@ exports.decode = function(token, secret){
     const header = JSON.parse(base64Decode(segments[0]));
     const payload = JSON.parse(base64Decode(segments[1]));
     
+    const rawSignature = segments[0] + '.' + segments[1];
+    
+    if(!verify(rawSignature, secret, segments[2])){
+        throw new Error("Verification failed");
+    }
+    
     return payload;
 };
 
+function verify(raw, secret, signature){
+    return signature === sign(raw, secret);
+}
 
 function sign(str, key){
     return crypto.createHmac('sha256', key).update(str).digest('base64');
