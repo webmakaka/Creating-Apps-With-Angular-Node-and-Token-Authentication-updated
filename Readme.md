@@ -310,6 +310,16 @@
 
 ### 47-Register Auth Service
 
+<br/>
+
+### 48-Passport Login
+
+    $ npm install --save passport
+    $ npm install --save passport-local
+    
+    
+
+
 ___
 
 **Marley**
