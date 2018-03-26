@@ -266,8 +266,16 @@
 
 ### 38-Design Break Optimize Alerts
 
+<br/>
+
+### 39-Switching to Node JWT Simple
 
 
+    $ cd backend/
+    $ npm install --save jwt-simple
+    
+    
+    
 ___
 
 **Marley**
