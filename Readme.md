@@ -239,6 +239,19 @@
 
 ### 34-Securing the Jobs Resource
 
+<br/>
+
+### 35-Auth Interceptor
+
+<br/>
+
+![Application](/img/part5-pic3?raw=true) 
+
+
+<br/>
+
+![Application](/img/part5-pic4?raw=true) 
+
 ___
 
 **Marley**

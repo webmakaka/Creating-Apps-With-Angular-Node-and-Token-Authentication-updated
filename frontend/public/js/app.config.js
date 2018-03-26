@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-    .module('myApp').config(function($urlRouterProvider, $stateProvider){
+    .module('myApp').config(function($urlRouterProvider, $stateProvider, $httpProvider){
         
         $urlRouterProvider.otherwise('/');
         
@@ -10,7 +10,6 @@ angular
                 url: '/',
                 templateUrl: 'views/main.html'
             })
-            
             
             .state('register', {
                 url: '/register',
@@ -28,4 +27,7 @@ angular
                 url: '/logout',
                 controller: 'LogoutCtrl'
             });
+            
+        $httpProvider.interceptors.push('authInterceptor');
+            
     }).constant('API_URL', 'http://localhost:3000/');
